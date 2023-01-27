@@ -1,11 +1,61 @@
-.nav1{
-    padding: 20px;
+.nav1{    
     display: flex;
-    align-items: center;
-    max-width: 100%;
-    margin: 0 auto;
+    justify-content: space-between;
+    height:55px;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 2px solid #f2f2f2;
+}
+#buttonlogin{
+    border-radius:10%;
+    background-color: black;
+    color: white;
+    border:0;
+    height:28px;
     
 
+}
+#buttonsignup{
+    border-radius:10%;
+    border-width: 1px;
+    border-color: black;
+    height:28px;
+    
+
+}
+#search input{
+    width:100%;
+}
+#skilledge{
+    padding-top:10px;
+}
+#logo{
+    width:18%;
+    display:flex;
+    margin:auto;
+    justify-content: space-around; 
+    font-weight:600;
+    font-size: 17px;
+    
+}
+#search{
+    margin:auto;
+    width:40%;
+    display:flex;
+    justify-content: space-around;
+}
+#auth{
+    display:flex;
+    width:25%;
+    margin:auto;
+    justify-content: space-around;
+}
+input{
+    background-color: #EEF0FD;
+    border-radius: 5px;
+    border-width: 0;
+    height:40px;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 

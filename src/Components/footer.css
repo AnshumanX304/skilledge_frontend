@@ -1,0 +1,43 @@
+.footer{
+    height:380px;
+    width:80%;
+    background-color: black;
+    color: white;
+    display:flex;
+    justify-content:space-around;
+    font-family: 'Roboto', sans-serif;
+}
+footer{
+    width:100%;
+    background-color: black;
+
+}
+.skill{
+    display:flex;
+    justify-content: space-between;
+
+}
+#skilledge{
+    font-size: 20px;
+}
+.logo{
+    display:flex;
+    justify-content: space-between;
+
+}
+.footer1{
+    margin-top:50px;
+}
+
+#skilledge2{
+    font-size:13px;
+}
+.col1{
+    line-height: 30px;
+}
+.footer2{
+    padding-top: 75px;
+}
+.footer3{
+    padding-top:125px;
+}

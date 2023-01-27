@@ -1,5 +1,7 @@
 import Navbar1 from './Components/nav1';
 // import Navbar2 from './Components/nav2';
+import Footer from './Components/footer';
+import './index.css';
 
 function App() {
   return (
@@ -9,8 +11,7 @@ function App() {
 
 
       </div>
-      
-      
+      <Footer/>  
     </div>
   );
 }
