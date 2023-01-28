@@ -12,14 +12,22 @@ footer{
     background-color: black;
 
 }
+.logodark{
+    margin-top: 15px;
+}
 .skill{
     display:flex;
     justify-content: space-between;
-
+   
 }
-#skilledge{
+.skilledge{
     font-size: 20px;
 }
+.skilledge1{
+    font-size: 23px;
+    
+}
+
 .logo{
     display:flex;
     justify-content: space-between;

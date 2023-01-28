@@ -1,6 +1,8 @@
 import "./nav.css";
 import logo from './logo/logose.png';
 import shop from './logo/shop.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 const Navbar1 = () => {
     return ( 
         <div className="nav1">
@@ -11,7 +13,8 @@ const Navbar1 = () => {
             </div>
 
             <div id="search">
-                <input id="searchbar" type="text" placeholder="    Search.."/>
+            <FontAwesomeIcon  className="searchicon" icon={faSearch}></FontAwesomeIcon>
+                <input id="searchbar" type="text" placeholder="Search.."/>
             </div>
              
             <div id="auth">

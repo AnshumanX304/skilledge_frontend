@@ -14,17 +14,17 @@ const Footer = () => {
                         <td>
                             <div class='skill'>
                                 <div>
-                                    <img height="40px" width="40px" src={dark} alt="Hi" />
+                                    <img className="logodark" height="40px" width="40px" src={dark} alt="Hi" />
                                 </div>
                                 <div>
-                                    <span id="skilledge">Skill Edge</span>
+                                    <p className="skilledge1">Skill Edge</p>
                                 </div>
                             </div>
                         </td>
                         
                     </tr>
                     <tr>
-                        <td><span id="skilledge">Contact Us</span></td>
+                        <td><span className="skilledge">Contact Us</span></td>
                     </tr>
                     <tr>
                        
