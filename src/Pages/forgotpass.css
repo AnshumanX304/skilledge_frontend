@@ -1,4 +1,4 @@
-.otp{
+.forgot{
     font-family: 'Roboto',sans-serif;
     margin:auto;
     width:30%;
@@ -6,14 +6,33 @@
     margin-top:70px;
     margin-bottom:60px;
 }
+.femail{
+    position:relative;
+}
+.femail input{
+    width:275px;
+    height:50px;
+    padding-left:50px;
+    
+}
+.fenvelope{
+    position:absolute;
+    bottom:18px;
+    left:12px;
+}
+.femail p{
+    font-size: 18px;
+    margin-bottom:10px;
+}
 .otp input{
     margin-right:9px;
     margin-bottom: 18px;
+    margin-top:15px;
     width:70px;
     height:70px;
     font-size:25px;
 }
-#continue{
+#resetpass{
     width:325px;
     height:50px;
     background-color: #293593;
@@ -22,7 +41,7 @@
     border-radius: 3%;
     border:0px;
 }
-#continue:hover{
+#resetpass:hover{
     width:325px;
     height:50px;
     background-color: #586AF5;
@@ -31,7 +50,7 @@
     border-radius: 3%;
     border:0px;
 }
-#continue1{
+#btl{
     width:325px;
     height:50px;
     background-color: white;
@@ -40,8 +59,9 @@
     border-radius: 3%;
     border-width:2px;
     border-color:#293593;
+    margin-top:15px;
 }
-#continue1:hover{
+#btl:hover{
     width:325px;
     height:50px;
     background-color: rgb(208, 214, 251);
