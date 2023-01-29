@@ -10,11 +10,13 @@ const Forgotpass = () => {
                 <div className="femail">
                     <p>Email</p>
                     <FontAwesomeIcon  className="fenvelope" icon={faEnvelope}></FontAwesomeIcon>
+                    <form>
                         <input 
                             type="email" 
                             name="email" 
                             placeholder="Enter your Email" 
                         /><br></br>
+                    </form>
                 </div>
                
                 <br></br>

@@ -32,7 +32,7 @@ const Login = () => {
                     </form>
                 </div>
                 <br></br>
-                <span class="forgot">Forgot  password ? <span id="click">Click here</span></span>
+                <span class="forgotit">Forgot  password ? <span id="click">Click here</span></span>
 
             </div>
 
