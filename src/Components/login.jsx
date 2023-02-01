@@ -1,7 +1,24 @@
 import './login.css';
+import {useState} from 'react';
+import { Link  , useNavigate} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope,faEye } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope,faEye,faKey,faEyeSlash} from '@fortawesome/free-solid-svg-icons';
 const Login = () => {
+
+    const [Type,setType]=useState('password');
+    const [seye,setEye]=useState(faEyeSlash);
+
+    const handleEye=()=>{
+        if(Type==='password')
+        {
+            setType('text');
+            setEye(faEye);
+        }
+        else{
+            setType('password');
+            setEye(faEyeSlash);
+        }
+    }   
     return ( 
 
         <div className="login1">
@@ -21,18 +38,19 @@ const Login = () => {
                         </div>
                         <div>
                             <label htmlFor="password">Password</label><br></br>
-                            <FontAwesomeIcon  className="eye" icon={faEye}></FontAwesomeIcon>
+                            <FontAwesomeIcon  className="lkey" icon={faKey}></FontAwesomeIcon>
+                            <FontAwesomeIcon  onClick={handleEye} className="leye" icon={seye}></FontAwesomeIcon>
                             <input 
-                                type="password" 
+                                type={Type}
                                 name="password" 
                                 placeholder="Password" 
                             />
                         </div><br></br>
-                        <button id="loginsubmit" type="submit">Log In</button>
+                        <button className="loginsubmit" type="submit">Log In</button>
                     </form>
                 </div>
                 <br></br>
-                <span class="forgotit">Forgot  password ? <span id="click">Click here</span></span>
+                <span class="forgotit">Forgot  password ? <Link to='/forgotpassword'><span id="click">Click here</span></Link></span>
 
             </div>
 
@@ -42,7 +60,7 @@ const Login = () => {
                     <p>Please log in to your account with</p>
                     <p>given details to continue</p>
                     <p>New here? Create an account</p>
-                    <button class='loginbutton'>Sign Up</button>
+                    <Link to='/signup'><button className='loginbutton'>Sign Up</button></Link>
                 </div>
             </div>
 

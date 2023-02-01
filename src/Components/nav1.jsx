@@ -1,4 +1,5 @@
 import "./nav.css";
+import {Link} from 'react-router-dom';
 import logo from './logo/logose.png';
 import shop from './logo/shop.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,8 +20,8 @@ const Navbar1 = () => {
              
             <div id="auth">
                 <img height="20px" width="20px" src={shop} alt="shop"></img>
-                <button id="buttonlogin">Log In</button>
-                <button id="buttonsignup">Sign Up</button>
+                <Link to='/login'><button id="buttonlogin">Log In</button></Link>
+                <Link to='/signup'><button id="buttonsignup">Sign Up</button></Link>
 
 
             </div>

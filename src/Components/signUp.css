@@ -1,0 +1,124 @@
+.signup1{
+    display:flex;
+    width:100%;
+    height:817px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.formdata2{
+    height:817px;
+    width:50%;   
+}
+.signupextra{
+    height:817px;
+    width:43%;
+    background-color:#586AF5;    
+}
+.signup_username{
+    position:absolute;
+    top:201px;
+    left:20px;
+    font-size: 15px;
+}
+.signupenvelope{
+    position:absolute;
+    left:18px;
+    bottom:130px;
+    color: black;
+    font-size: 17px;
+}
+.signup_firstname{
+    top:80px;
+    position:absolute;
+    left:16px;
+    font-size: 15px;
+}
+.signup_lastname{
+    top:143px;
+    left:16px;
+    font-size: 15px;
+    position:absolute;
+
+
+}
+.signupform2{
+    margin:auto;
+    height:50%;
+    width:70%;
+    margin-top:200px;
+    position:relative;
+}
+.signupform input{
+    margin:9px;
+    padding-left:40px;
+}
+.inputwidth{
+    width:82%;
+}
+.inputwidth1{
+    width:82%;
+}
+
+.signupspace{
+    height:817px;
+    width:7%;
+}
+.signupintro{
+    height:250px;
+    width:43%;
+    margin-top:50%;
+    margin-left:30%;
+    color:white;    
+}
+
+.signupbutton{
+    width:160px;
+    height:60px; 
+    color:white;
+    background-color: #586AF5;
+    border:3px solid white;
+    border-color: white;
+    border-radius:5%;
+    font-size: 20px;
+}
+.signupsubmit{
+    width:92%;
+    height:50px;
+    background-color: #293593;
+    border-radius:5%;
+    border:0px;
+    color:white;
+    font-size: 17px;
+    margin-left:9px;
+    margin-top:15px;
+}
+.eye4{
+    position:absolute;
+    bottom:10px;
+    left:85%;
+    color:grey;
+    font-size: 17px;
+}
+.eye3{
+    position:absolute;
+    bottom:70px;
+    left:85%;
+    color:grey;
+    font-size: 17px;
+}
+.SKey1{
+    position:absolute;
+    bottom:70px;
+    left:15px;
+    color:grey;
+    font-size: 15px;
+    color: black;
+}
+.SKey2{
+    position:absolute;
+    bottom:10px;
+    left:15px;
+    color:grey;
+    font-size: 15px;
+    color: black;
+}

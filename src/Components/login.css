@@ -18,7 +18,7 @@
     position:absolute;
     bottom:180px;
     left:15px;
-    color:grey;
+    color:black;
 }
 .forgotit{
     margin-left:31%;
@@ -38,7 +38,7 @@
     color:#293593;
     cursor:pointer;
 }
-#loginsubmit{
+.loginsubmit{
     width:385px;
     height:50px;
     background-color: #293593;
@@ -63,10 +63,17 @@
    margin-top:30px;
    color:grey;
 }
-.eye{
+.lkey{
     position:absolute;
     bottom:96px;
     left:15px;
+    color:black;
+
+}
+.leye{
+    position:absolute;
+    bottom:96px;
+    left:347px;
     color:grey;
 }
 input{
