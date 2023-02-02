@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import './forgotpass.css';
+import {Link} from 'react-router-dom';
 const Forgotpass = () => {
     
     return (  
@@ -23,7 +24,7 @@ const Forgotpass = () => {
                 <button id="resetpass">Reset Password</button>
                 
 
-                <button id="btl">Back to login</button>
+                <Link to='/login'><button id="btl">Back to login</button></Link>
             </div>
 
 

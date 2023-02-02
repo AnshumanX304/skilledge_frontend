@@ -16,31 +16,19 @@
 }
 .signup_username{
     position:absolute;
-    top:201px;
+    top:81px;
+    bottom:251px;
     left:20px;
     font-size: 15px;
 }
 .signupenvelope{
     position:absolute;
     left:18px;
-    bottom:130px;
+    bottom:251px;
     color: black;
     font-size: 17px;
 }
-.signup_firstname{
-    top:80px;
-    position:absolute;
-    left:16px;
-    font-size: 15px;
-}
-.signup_lastname{
-    top:143px;
-    left:16px;
-    font-size: 15px;
-    position:absolute;
 
-
-}
 .signupform2{
     margin:auto;
     height:50%;
@@ -53,9 +41,6 @@
     padding-left:40px;
 }
 .inputwidth{
-    width:82%;
-}
-.inputwidth1{
     width:82%;
 }
 
@@ -94,30 +79,15 @@
 }
 .eye4{
     position:absolute;
-    bottom:10px;
-    left:85%;
-    color:grey;
-    font-size: 17px;
-}
-.eye3{
-    position:absolute;
-    bottom:70px;
+    bottom:192px;
     left:85%;
     color:grey;
     font-size: 17px;
 }
 .SKey1{
     position:absolute;
-    bottom:70px;
-    left:15px;
-    color:grey;
-    font-size: 15px;
-    color: black;
-}
-.SKey2{
-    position:absolute;
-    bottom:10px;
-    left:15px;
+    bottom:192px;
+    left:19px;
     color:grey;
     font-size: 15px;
     color: black;
