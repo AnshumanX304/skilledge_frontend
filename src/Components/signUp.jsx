@@ -43,22 +43,11 @@ const Signup = () => {
                 <div className='signupform2'>
                 <h2>Create Account</h2>
                 <form className="signupform">
-                <FontAwesomeIcon  className="signup_firstname" icon={faStar}></FontAwesomeIcon> 
-                <FontAwesomeIcon  className="signup_lastname" icon={faStar}></FontAwesomeIcon>   
-                    <input className="inputwidth1"
-                        type="text" 
-                        name="FirstName" 
-                        placeholder="First Name" 
-                    /><br></br>
-                    <input className="inputwidth1"
-                        type="text" 
-                        name="LastName" 
-                        placeholder="Last Name" 
-                    /><br></br>
+                   
                     <FontAwesomeIcon  className="signup_username" icon={faUser}></FontAwesomeIcon>
                     <input className="inputwidth"
                         type="text" 
-                        name="username" 
+                        name="Username" 
                         placeholder="Username" 
                     /><br></br>
                     <FontAwesomeIcon  className="signupenvelope" icon={faEnvelope}></FontAwesomeIcon>
@@ -73,13 +62,6 @@ const Signup = () => {
                         type={Type}
                         name="password" 
                         placeholder="Password" 
-                    /><br></br>
-                    <FontAwesomeIcon  onClick={handleEye} className="eye3" icon={seye}></FontAwesomeIcon>
-                    <FontAwesomeIcon  className="SKey2" icon={faKey}></FontAwesomeIcon>
-                     <input className="inputwidth"
-                        type={Type}
-                        name="cpassword" 
-                        placeholder="Confirm Password" 
                     /><br></br>
                 </form>
                 <button class="signupsubmit">Sign Up</button>
