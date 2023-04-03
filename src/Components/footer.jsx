@@ -2,7 +2,7 @@ import './footer.css';
 import dark from './logo/logose.png';
 import facebook from './logo/facebook.png';
 import linkedin from './logo/linkedin.png';
-import instagram from './logo/instagram.png';
+import instagram from './logo/instagram.png';   
 const Footer = () => {
     return ( 
         <footer>

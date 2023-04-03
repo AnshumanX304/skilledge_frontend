@@ -43,6 +43,10 @@
 .inputwidth{
     width:82%;
 }
+.signupsubmit:hover{
+    background-color: #586AF5;
+    transform:scale(1.02);
+}
 
 .signupspace{
     height:817px;
