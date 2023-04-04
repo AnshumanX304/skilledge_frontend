@@ -21,6 +21,12 @@
     left:20px;
     font-size: 15px;
 }
+#password-validation{
+    font-size:10px;
+    color:red;
+    padding-left: 10px;
+    margin:0px;
+}
 .signupenvelope{
     position:absolute;
     left:18px;

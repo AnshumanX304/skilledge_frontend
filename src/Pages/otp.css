@@ -6,12 +6,15 @@
     margin-top:70px;
     margin-bottom:60px;
 }
-.otp input{
-    margin-right:9px;
-    margin-bottom: 18px;
-    width:180px;
-    height:70px;
-    font-size:25px;
+#otp-inputField input{
+    /* padding-left:40px;
+    padding-right:0; */
+    text-indent:39px;
+    width:320px;
+    letter-spacing: 50px;
+    font-size: 35px;
+    padding-right:0;
+    
 }
 #continue{
     width:325px;
