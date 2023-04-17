@@ -17,7 +17,7 @@
 }
 .fenvelope{
     position:absolute;
-    bottom:18px;
+    bottom:88px;
     left:12px;
 }
 .femail p{
@@ -32,6 +32,8 @@
     font-size:20px;
     border-radius: 3%;
     border:0px;
+    margin-top:20px;
+    margin-bottom:0px;
 }
 #resetpass:hover{
     width:325px;
@@ -51,7 +53,6 @@
     border-radius: 3%;
     border-width:2px;
     border-color:#293593;
-    margin-top:15px;
 }
 #btl:hover{
     width:325px;

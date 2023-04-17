@@ -6,6 +6,8 @@ import Signup from'./Components/signUp';
 import Otp from'./Pages/otp';
 import Forgotpass from'./Pages/forgotpass';
 import Resetpass from'./Pages/resetpassword';
+import Home from './Pages/home';
+import Coursedesc from './Pages/coursedesc';
 
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import './index.css';
@@ -22,7 +24,8 @@ function App() {
               <Route exact path="/otp" element={<Otp/>}/>
               <Route exact path="/forgotpassword" element={<Forgotpass/>}/>
               <Route exact path="/resetpassword" element={<Resetpass/>}/>
-             
+              <Route exact path="/coursedesc" element={<Coursedesc/>}/>
+              <Route exact path="/" element={<Home/>}></Route> 
             </Routes>
 
           </div>

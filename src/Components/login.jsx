@@ -38,7 +38,6 @@ const Login = () => {
         axios.post("http://localhost:4000/user/signin",{
             email:userEmail,
             password:password
-
         })
         .then((res)=>{
             console.log(res.data);
@@ -52,10 +51,11 @@ const Login = () => {
     return ( 
 
         <div className="login1">
+            
             <div className="formdata">
                 <div className='loginform2'>
                     <h2>Log In Account </h2>
-                    <form class="formlogin" onSubmit={handleSubmits}>
+                    <form className="formlogin" onSubmit={handleSubmits}>
                         <div>
                             <label htmlFor="email">Email</label><br></br>
                             <FontAwesomeIcon  className="envelope" icon={faEnvelope}></FontAwesomeIcon>
@@ -92,7 +92,7 @@ const Login = () => {
             </div>
 
             <div className="extra">
-                <div className='intro'>
+                <div className="intro">
                     <h2>Welcome Back !</h2>
                     <p>Please log in to your account with</p>
                     <p>given details to continue</p>
