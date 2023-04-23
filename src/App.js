@@ -1,4 +1,5 @@
 import Navbar1 from './Components/nav1';
+import Navbar2 from './Components/nav2';
 // import Navbar2 from './Components/nav2';
 import Footer from './Components/footer';
 import Login from'./Components/login';
@@ -16,7 +17,7 @@ function App() {
   return (
     <Router>
         <div className="App">
-          <Navbar1/>
+          <Navbar2/>
           <div className="content">
             <Routes>
               <Route exact path="/login" element={<Login/>}/>

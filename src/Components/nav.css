@@ -67,6 +67,37 @@ input{
     font-size: 16px;
     line-height: 24px;
 }
+.submenu{
+    z-index: 1;
+    background-color:#F6FAFA; 
+    position:absolute;
+    top:58px;
+    right:40px;
+    width:180px;
+    overflow:hidden;
+    max-height: 0;
+    transition: max-height 0.5s;
+    border-radius: 8px;
+}
+.submenu.open-menu{
+    max-height: 400px;
+   
+}
+.submenu p{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.15px;
+    line-height: 23px;
+    text-align: center;
+   
+}
+.image_submenu{
+    margin-left:26%;
+    padding:0;
+}
+#nav_imagelogo{
+    position:relative;
+}
+
 
 
 

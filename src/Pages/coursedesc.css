@@ -1,0 +1,169 @@
+
+.desc_heading{
+    background: #0A0E31;
+    color:white;
+    height:328px;
+    padding:98px 523px 150px 96px;
+    box-sizing: border-box;
+}
+.desc_mainheading{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 0.25px;
+    margin:3px;
+
+}
+.desc_rateinforate{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-size:48px;
+    margin-left:18px;
+}
+.desc_sideheading{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    margin:6px;
+}
+.desc_ratinginfo{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+}
+.desccards-popularcourses{
+    height:450px;
+    display:flex;
+    margin-left:40px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.desc_next_btn{
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    border-width: 0;
+    color:#293593;
+    font-size:20px;
+    background-color:#dbdff7;
+
+}
+.desc_rateinfo{
+    background-color: #F2F2F2;
+    height:410px;
+    border-radius: 10px;
+    position:absolute;
+    left:75%;
+    top:20%;
+}
+.desc_prev_btn{
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    border-width: 0;
+    color:#293593;
+    font-size:20px;
+    background-color:#dbdff7;
+    margin: 10px 1vw 10px 85vw;
+}
+.heading_coursedesc{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    margin-top:50px;
+    margin-left:40vw;
+}
+#desc_ratingstar{
+    font-size: 20px;
+    color:#F48C06;
+    margin-right:8px;
+   
+}
+.desc_rateinfo{
+    width:290px;
+}
+.desc_rateinfobuttons{
+    display:flex;
+    justify-content: space-around;
+    margin-right:30px;
+   
+}
+.desc_titles{
+    display:flex;
+    justify-content: space-around;
+    padding-right:40vw;
+    padding-top:8vh;
+    color:#293593;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.descinfo{
+    width:824px;
+    margin-left:117px;
+    margin-top:40px;
+}
+.desc_buynow{
+    background-color: #293593;
+    color:white;
+    width: 100px;
+    height: 37px;
+    border-radius: 8px;
+
+
+}
+.desc_addtocart{
+    color:#293593;
+    width: 100px;
+    height: 37px;
+    border-radius: 8px;
+
+
+}
+.desc_rateinfoimage{
+    margin-left:10px;
+}
+.desc_rateinfodescstyle{
+    margin:6px;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-size:14px;
+    margin-left:22px;
+
+}
+#desc_rateinfodescstyle{
+    font-weight: 600;
+    font-size: 18px;
+
+}
+.desc_titles_2{
+    
+    color:black;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+}
+#desctitles2content{
+    font-family: 'Roboto',sans-serif;
+    line-height: 20px;
+}
+.desc_exploremore{
+    margin-bottom:130px;
+}
+#nav_button{
+    width:90px;
+    height:25px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+#nav_shop{
+    margin-top:8px;
+}
+
+
+
