@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faKey} from '@fortawesome/free-solid-svg-icons';
 import {useState} from 'react';
 import {Link,useNavigate} from 'react-router-dom';
+import Navbar1 from '../Components/nav1';
 import './resetpassword.css';
 import { useEffect } from 'react';
 import axios from 'axios';
@@ -58,8 +59,11 @@ const Resetpass = () => {
     }
 
 
-    return (  
+    return ( 
+        <>
+        <Navbar1/>
         <div>
+        
             <div className='reset'>
                 <h1>Reset Password</h1>
                 <div className="rpass">
@@ -99,6 +103,7 @@ const Resetpass = () => {
 
 
         </div>
+        </> 
     );
 }
  

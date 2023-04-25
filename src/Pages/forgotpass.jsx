@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import './forgotpass.css';
 import {useState} from 'react';
+import Navbar1 from '../Components/nav1';
 import axios from 'axios';
 import {Link,useNavigate} from 'react-router-dom';
 import  validator from 'validator';
@@ -42,7 +43,10 @@ const Forgotpass = () => {
     }
     
     return (  
+        <>
+        <Navbar1/>
         <div>
+            
             <div className='forgot'>
                 <h1>Forgot Password</h1>
                 <div className="femail">
@@ -71,6 +75,7 @@ const Forgotpass = () => {
 
 
         </div>
+    </>
     );
 }
  

@@ -1,11 +1,13 @@
 import './login.css';
-import {useState} from 'react';
+import {useState,useContext} from 'react';
 import axios from 'axios';
+import Navbar1 from './nav1';
 import { Link ,useNavigate} from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope,faEye,faKey,faEyeSlash} from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer, toast } from 'react-toastify';
 import  validator from 'validator';
+import AuthContext from './shared/authContext';
 const Login = () => {
     const navigate=useNavigate();
     const [Type,setType]=useState('password');
@@ -13,6 +15,8 @@ const Login = () => {
     
     const [userEmail, setuserEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const { login } = useContext(AuthContext);
     
     
     const handleEye=()=>{
@@ -33,25 +37,20 @@ const Login = () => {
         setPassword(e.target.value);
     }
 
-    function handleSubmits(e){
+    async function handleSubmits(e){
         e.preventDefault();
-        axios.post("http://localhost:4000/user/signin",{
-            email:userEmail,
-            password:password
-        })
-        .then((res)=>{
-            console.log(res.data);
-            navigate("/");
-        })
-        .catch((err)=>{
-            console.log(err.response.data);
-            alert(err.response.data.msg);
-        });
+        let payload = {
+            email: userEmail,
+            password: password
+        };
+        await login(payload);
     }
     return ( 
+        <>
+        <Navbar1/>
 
         <div className="login1">
-            
+       
             <div className="formdata">
                 <div className='loginform2'>
                     <h2>Log In Account </h2>
@@ -107,6 +106,7 @@ const Login = () => {
             
             
         </div>
+        </>
      );
 }
  

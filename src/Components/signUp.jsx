@@ -1,6 +1,7 @@
 import './signUp.css';
 import {useState} from 'react';
 import axios from 'axios';
+import Navbar1 from './nav1';
 import {Link,useNavigate} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEye,faEnvelope,faKey,faUser,faEyeSlash} from '@fortawesome/free-solid-svg-icons';
@@ -104,8 +105,11 @@ const Signup = () => {
 
     return ( 
     
-        
+        <>
+        <Navbar1/>
+       
         <div className="signup1">
+
       
 
             <div className="signupspace">
@@ -179,6 +183,7 @@ const Signup = () => {
 
             
         </div>
+        </>
        
 
       
