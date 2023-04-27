@@ -1,6 +1,6 @@
 import axios from "axios";
 import { createContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
  
 const AuthContext = createContext();
  
@@ -12,30 +12,18 @@ export const AuthContextProvider = ({ children }) => {
     }
     return null;
   });
-  const navigate = useNavigate();
+
   const login = async (payload) => {
-    axios.post("http://localhost:4000/user/signin", 
-    payload
-    )
-    .then((res)=>{
-        console.log(res.data);
-        localStorage.setItem("isloggedin" , true);
-        navigate("/");
-    })
-    .catch((err)=>{
-        console.log(err.response.data);
-        alert(err.response.data.msg);
-    });
-    // let apiResponse = await axios.get("http://localhost:4000/user-profile", {
-    //   withCredentials: true,
-    // });
-    // localStorage.setItem("userProfile", JSON.stringify(apiResponse.data));
-    // setUser(apiResponse.data);
-    // navigate("/");
-  };
+    return axios.post("http://localhost:4000/user/signin", payload)
+    };
+
+  const signup=async(payload)=>{
+    return axios.post("http://localhost:4000/user/register",payload)
+    };
+
   return (
     <>
-      <AuthContext.Provider value={{ user, login }}>
+      <AuthContext.Provider value={{ user, login, signup}}>
         {children}
       </AuthContext.Provider>
     </>

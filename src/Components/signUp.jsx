@@ -1,15 +1,13 @@
 import './signUp.css';
-import {useState} from 'react';
-import axios from 'axios';
+import {useState,useContext} from 'react';
+import Cookies from "js-cookie";
 import Navbar1 from './nav1';
 import {Link,useNavigate} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEye,faEnvelope,faKey,faUser,faEyeSlash} from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer, toast } from 'react-toastify';
-
-// import Loader from "../Loader";
+import AuthContext from './shared/authContext';
 import 'react-toastify/dist/ReactToastify.css';
-
 import validator from 'validator';
 import { useEffect } from 'react';
 
@@ -21,7 +19,9 @@ const Signup = () => {
     const [userEmail, setuserEmail] = useState("");
     const [password, setPassword] = useState("");
     const [CorrectPassword,setCorrectPassword]=useState(true);
-    // const [loading, setLoading] = useState(false);
+
+    const { signup } = useContext(AuthContext);
+
 
     const handleEye=()=>{
         if(Type==='password')
@@ -50,41 +50,26 @@ const Signup = () => {
 
    
 
-    function handleSubmits(e){
+    async function handleSubmits(e){
                 e.preventDefault();
-                
-                //   const data=axios.post("http://localhost:6000/user/register", {
-                //       username:userName,
-                //       email:userEmail , 
-                //       password:password
-                //     })
-                //     console.log(data);
-                // setLoading(true);
-                if(CorrectPassword){
-                    axios.post("http://localhost:4000/user/register", {
-                        username:userName,
-                        email:userEmail , 
-                        password:password
-                    })
-                    .then((res) => {
-                        // setMssg(res.data.msg);
-                        console.log(res.data);   
-                        // alert(res.data.msg); 
-                        // setLoading(false);
-                        navigate("/");
-                        // setStatus(res.data.success);
-                        // setLoading(false);
-                        // navigate("/otp2");
-                    })
-                    .catch((err) => {
-                        console.log(err.response.data);
-                        alert(err.response.data.msg);
-                        
-                        
-                    //     setLoading(false);
-                    //   setMssg(err.response.data.msg);
-                    });
-                }
+                let payload={
+                    username:userName,
+                    email:userEmail,
+                    password:password
+                };
+                console.log('hello');
+                await signup(payload)
+                .then((res)=>{
+                    console.log(res.data.success,res.data.msg);
+                    localStorage.setItem("isloggedin" , 'true');
+                    Cookies.set("rf_token",res.data.refreshtoken);
+                    Cookies.set("ac_token",res.data.accesstoken);
+                    navigate("/");
+                })
+                .catch((err)=>{
+                    console.log(err.response.data);
+                    alert(err.response.data.msg);
+                });
         }
         useEffect(()=>{
             if(password.length>0 & password.length<15){

@@ -14,6 +14,9 @@
     
 
 }
+.nav_submenu_details :hover{
+    cursor: pointer;
+}
 
 #buttonsignup{
     border-radius:10%;

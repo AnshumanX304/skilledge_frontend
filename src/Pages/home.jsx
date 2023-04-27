@@ -4,12 +4,16 @@ import home_demo from './images/home_demo.png';
 import Card from './card.jsx';
 import Navbar1 from '../Components/nav1';
 import Navbar2 from '../Components/nav2';
+import { useEffect } from 'react';
 
 const Home = () => {
-    let isloggedin=localStorage.setItem("isloggedin" , true);
+    useEffect(()=>{
+        console.log(localStorage.getItem("isloggedin"));
+    },[])
+
 
     const box=document.querySelector('.homecards-popularcourses');
-
+    let logged=localStorage.getItem("isloggedin");
     function popularcoursePreviousbutton(){
         const width=box.clientWidth;
         
@@ -44,7 +48,7 @@ const Home = () => {
 
     return ( 
         <div className="home">
-            {isloggedin?<Navbar1/>:<Navbar2/>}
+            {logged==='true'?<Navbar2/>:<Navbar1/>}
             <div className="section1">
                 <div className="home-content">
                     <p className='intro_line'>Start Learning</p>

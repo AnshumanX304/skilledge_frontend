@@ -2,15 +2,31 @@ import "./nav.css";
 import {Link} from 'react-router-dom';
 import logo from './logo/logose.png';
 import shop from './logo/shop.png';
+import Cookies from 'js-cookie';
+import {useNavigate} from "react-router-dom";
 import Ellipse36 from './logo/Ellipse36.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faToggleOff } from '@fortawesome/free-solid-svg-icons';
 const Navbar2 = () => {
+    const navigate=useNavigate();
 
+    function logout(){
+        localStorage.setItem("isloggedin" ,'false');
+        console.log(localStorage.getItem("isloggedin"));
+        // console.log(Cookies.get('ac_token'));
+        // console.log(Cookies.get('rf_token'));
+        Cookies.remove('ac_token');
+        Cookies.remove('rf_token');
+        // console.log(Cookies.get('ac_token'));
+        // console.log(Cookies.get('rf_token'));
 
+        navigate("/login");
+
+    }
     function toggleMenu(){
         let submenu=document.getElementById('subMenu');
         submenu.classList.toggle("open-menu");
+
 
     }
     return ( 
@@ -36,22 +52,22 @@ const Navbar2 = () => {
                     <div className="image_submenu">
                         <img src={Ellipse36} height="90px" width="90px" alt="" />
                     </div>
-                    <div>
-                        <p>Edit Profile</p>
+                    <div className="nav_submenu_details">
+                        <p >Edit Profile</p>
                     </div>
-                    <div>
-                        <p style={{color:"#586AF5"}}>Switch to Educator</p>
+                    <div className="nav_submenu_details">
+                        <p className="nav_submenu_details" style={{color:"#586AF5"}}>Switch to Educator</p>
 
                     </div>
-                    <div>
-                        <p>Wallet</p>
+                    <div className="nav_submenu_details">
+                        <p >Wallet</p>
 
                     </div>
-                    <div>
-                        <p>Privacy</p>
+                    <div className="nav_submenu_details">
+                        <p >Privacy</p>
                     </div>
-                    <div>
-                        <p>Log out</p>
+                    <div className="nav_submenu_details" onClick={logout}>
+                        <p >Log out</p>
                     </div>
                 </div>
                
