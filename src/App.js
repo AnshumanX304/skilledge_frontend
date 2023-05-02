@@ -6,6 +6,7 @@ import Signup from'./Components/signUp';
 import Otp from'./Pages/otp';
 import Forgotpass from'./Pages/forgotpass';
 import Resetpass from'./Pages/resetpassword';
+import UploadCourse from'./Educator/uploadCourse';
 import Home from './Pages/home';
 import Coursedesc from './Pages/coursedesc';
 import { AuthContextProvider } from "./Components/shared/authContext";
@@ -21,6 +22,7 @@ function App() {
           <div className="App">
             <div className="content">
               <Routes>
+                <Route exact path="/uploadcourse" element={<UploadCourse/>}/>
                 <Route exact path="/login" element={<Login/>}/>
                 <Route exact path="/signup" element={<Signup/>}/>
                 <Route exact path="/otp" element={<Otp/>}/>

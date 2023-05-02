@@ -4,12 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import rateblockimage from './images/rateblockimage.png';
 import {useState} from 'react';
+import { useEffect } from 'react';
 
 const Coursedesc = () => {
+    let box3;
+    useEffect(()=>{
+        box3=document.querySelector('.desccards-popularcourses');
 
-    
-    const box3=document.querySelector('.desccards-popularcourses');
-
+    })
+   
     function descpopularcoursePreviousbutton(){
         const width=box3.clientWidth;
         console.log(width);

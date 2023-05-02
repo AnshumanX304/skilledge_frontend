@@ -1,0 +1,68 @@
+.uploadcourse{
+    display:flex;
+}
+.uploadcourse_leftsection{
+
+    height:50%;
+    width:50%;
+}
+.uploadcourse_rightsection{
+
+    height:50%;
+    width:50%;
+}
+.uploadcourseform{
+    padding:150px 100px;
+}
+#limageid{
+    padding-top:250px;
+    padding-bottom: 252px;
+    padding-left:30px;
+    padding-right:40px;
+}
+.uploadcourseform input{
+    display:block;
+    width:402px;
+    border-color: #293593;
+    border-width:2px;
+    margin-bottom:17px;
+    border-radius: 5px;
+
+}
+
+.uploadcourseform label{
+    font-family: 'Roboto', sans-serif;
+}
+#uploadcourse_description{
+    height:116px;
+}
+.uploadcourseform select{
+    display:block;
+    width:408px;
+    height:50px;
+    border-color: #293593;
+    border-width:2px;
+    margin-bottom:10px;
+
+}
+#uploadcourse-thumbnail{
+    height:150px;
+    outline: black;
+
+}
+::-webkit-file-upload-button{
+    cursor: pointer;
+    margin-left:24%;
+    margin-top:15%;
+}
+#upload_categories{
+    border-radius: 5px;
+    background-color: #EEF0FD;
+    color:grey;
+    font-size: 15px;
+    width:425px;
+}
+.spaceleftinput{
+    padding-left:15px;
+}
+

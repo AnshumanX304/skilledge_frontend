@@ -1,22 +1,59 @@
 import './home.css';
 import React from 'react';
+import Cookies from "js-cookie";
 import home_demo from './images/home_demo.png';
 import Card from './card.jsx';
 import Navbar1 from '../Components/nav1';
 import Navbar2 from '../Components/nav2';
-import { useEffect } from 'react';
+import { useEffect} from 'react';
+import {useEffectOnce} from 'usehooks-ts';
+import axios from '../Components/shared/interceptor';
+
+
 
 const Home = () => {
+    let box,box1;
     useEffect(()=>{
-        console.log(localStorage.getItem("isloggedin"));
+        // console.log(localStorage.getItem("isloggedin"));
+        box=document.querySelector('.homecards-popularcourses');
+        box1=document.querySelector('.homecards-foryou');
+        getcourse();
     },[])
 
+    
 
-    const box=document.querySelector('.homecards-popularcourses');
+    // useEffectOnce(()=>{
+    //     console.log("home");
+    //     getcourse();
+
+    // },[])
+    
+        async function getcourse(){
+      
+        console.log('get courses api called !');
+        await axios.get("http://localhost:4000/user/getcourses",{
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: 'Bearer ' + Cookies.get('ac_token')
+            }
+        })
+        .then((res)=>{
+            console.log(res);
+
+        })
+        .catch((err)=>{
+            console.log(err);
+            
+        })
+
+        }
+    
+   
+
+    
     let logged=localStorage.getItem("isloggedin");
     function popularcoursePreviousbutton(){
         const width=box.clientWidth;
-        
         console.log(width);
         box.scrollLeft=box.scrollLeft-width;
     }
@@ -28,7 +65,7 @@ const Home = () => {
     }
 
 
-    const box1=document.querySelector('.homecards-foryou');
+    
 
     function foryoucoursePreviousbutton(){
         const width=box1.clientWidth;

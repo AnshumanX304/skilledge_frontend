@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "./interceptor";
 import { createContext, useState } from "react";
 // import { useNavigate } from "react-router-dom";
  
@@ -20,6 +20,7 @@ export const AuthContextProvider = ({ children }) => {
   const signup=async(payload)=>{
     return axios.post("http://localhost:4000/user/register",payload)
     };
+
 
   return (
     <>
