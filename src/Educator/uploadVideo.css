@@ -1,0 +1,39 @@
+.uploadvideo_left{
+    height:30%;
+    width:30%;
+    padding:10%;
+}
+.uploadvideo{
+    display:flex;
+}
+.uploadvideo_right{
+    height:30%;
+    width:30%;
+    padding-top:5%;
+
+}
+.uploadvideo_right h1{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    padding-left: 24%;
+    color:#293593;
+
+}
+.uploadvideo_right_form_label2{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    color:#293593;
+
+}
+#uploadvideo-thumbnail{
+    height:150px;
+    outline: black;
+
+}
+.spaceleftinput-uploadvideo{
+    padding-left:15px;
+    width:103%;
+}
