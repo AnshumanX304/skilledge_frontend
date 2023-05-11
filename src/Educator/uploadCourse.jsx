@@ -1,6 +1,6 @@
 import './uploadCourse.css'
 import Nav3 from '../Components/nav3';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import AuthContext from '../Components/shared/authContext';
 import Limage from './eduimages/limage.png'
 import {useState,useContext} from 'react';
@@ -8,7 +8,8 @@ import UploadVideo from './uploadVideo';
 
     
 const Uploadcourse = () => {
-
+ 
+    const navigate=useNavigate();
     const [image,setImage]=useState('');
     const [topic,setTopic]=useState('');
     const [description,setDescription]=useState('');
@@ -61,6 +62,7 @@ const Uploadcourse = () => {
         .then((res)=>{
             console.log(res.data.success,res.data.msg);
             setPage(false);
+            navigate('/eduhome');
         })
         .catch((err)=>{
             console.log(err.response.data);

@@ -1,8 +1,11 @@
 import axios from "./interceptor";
-import { createContext, useState } from "react";
+import Cookies from "js-cookie";
+import { createContext, useState} from "react";
+
 // import { useNavigate } from "react-router-dom";
  
 const AuthContext = createContext();
+
  
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
@@ -21,12 +24,39 @@ export const AuthContextProvider = ({ children }) => {
     return axios.post("http://localhost:4000/user/register",payload)
     };
 
+    const uploadcoursedata=async(payload)=>{
+       
+       return axios.post("http://localhost:4000/user/addcourse",payload,
+       {
+            headers: {
+                "Content-Type": "multipart/form-data",
+                Authorization: 'Bearer ' + Cookies.get('ac_token')
+            }
+        })
+
+    };
+
+    const sendcourse=async()=>{
+        return axios.get("http://localhost:4000/user/sendcourse",
+       {
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: 'Bearer ' + Cookies.get('ac_token')
+            }
+        })
+
+    }
+
+
+
+
 
   return (
     <>
-      <AuthContext.Provider value={{ user, login, signup}}>
+      <AuthContext.Provider value={{ user, login, signup,uploadcoursedata,sendcourse}}>
         {children}
       </AuthContext.Provider>
+      
     </>
   );
 };

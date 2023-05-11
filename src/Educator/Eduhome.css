@@ -1,0 +1,15 @@
+.eduhome-left{
+    width:70%;
+    display:flex;
+    flex-wrap: wrap;
+    margin-left:10%;
+}
+.eduhome-right{
+    width:30%;
+    padding-top:140px;
+    padding-right:150px;
+}
+.eduhome{
+    display:flex;
+    padding:50px 0;
+}

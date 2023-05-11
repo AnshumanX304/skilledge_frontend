@@ -20,8 +20,8 @@ const Navbar3 = () => {
              
             <div id="auth">
             
-                <button id="uploadcourse_buttonlogin">Home</button>
-                <button id="uploadcourse_buttonsignup">Host Course</button>
+                <Link to='/eduhome'><button id="uploadcourse_buttonlogin">Home</button></Link>
+                <Link to='/uploadcourse'><button id="uploadcourse_buttonsignup">Host Course</button></Link>
 
 
             </div>
