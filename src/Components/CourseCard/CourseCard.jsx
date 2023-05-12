@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './CourseCard.css';
 
 
 
 const Cards = (props) => {
     const cardimage="http://localhost:4000";
+
 
 
 
@@ -17,9 +19,14 @@ const Cards = (props) => {
                 <div className="course_title">{props.topic}</div>
                 <div className="course_desc">{props.description}</div>
                 <div className="course_rate">
-                    <button className="viewcoursesubmit">
-                        View Course  
-                    </button>
+                    
+                    <Link to={`/eduhome/${props.id}`} >
+                        <button className="viewcoursesubmit">
+                            View Course  
+                        </button>
+                    </Link>
+             
+                    
                     <div>
                         <button className="home-explore-button">Edit</button>
                     </div>

@@ -9,6 +9,7 @@ import Resetpass from'./Pages/resetpassword';
 import UploadCourse from'./Educator/uploadCourse';
 import Home from './Pages/home';
 import Eduhome from './Educator/Eduhome';
+import ProductDetails from './Educator/ProductDetails.jsx';
 
 import Coursedesc from './Pages/coursedesc';
 import { AuthContextProvider } from "./Components/shared/authContext";
@@ -33,6 +34,7 @@ function App() {
                 <Route exact path="/forgotpassword" element={<Forgotpass/>}/>
                 <Route exact path="/resetpassword" element={<Resetpass/>}/>
                 <Route exact path="/coursedesc" element={<Coursedesc/>}/>
+                <Route exact path="/eduhome/:key" element={<ProductDetails/>}/>
                 {/* <Route exact path="/uploadvideo" element={<Uploadvideo/>}/> */}
                 <Route exact path="/" element={<Home/>}/> 
               </Routes>

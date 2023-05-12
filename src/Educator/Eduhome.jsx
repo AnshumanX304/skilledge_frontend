@@ -13,16 +13,14 @@ const Eduhome = () => {
     const [courseList,setCourseList]=useState([]);
     
     useEffect(()=>{
-
-        console.log(courseList);
         sendCourse();
-       
     },[])
     
     function createList(course) {
         return (
           <Course
             key={course._id}
+            id={course._id} 
             imgpath={course.imgpath}
             topic={course.topic}
             description={course.description}
@@ -30,7 +28,6 @@ const Eduhome = () => {
             price={course.price}
             lesson={course.lesson}
             vidpath={course.vidpath}
-
           />
         );
       }
@@ -40,8 +37,9 @@ const Eduhome = () => {
         
         await sendcourse()
         .then((res)=>{
-            console.log(res.data.myCourses);
+            // console.log(res.data.myCourses);
             setCourseList(res.data.myCourses);
+            
         })
         .catch((err)=>{
             console.log(err);
