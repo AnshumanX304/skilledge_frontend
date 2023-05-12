@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react";
 import axios from 'axios';
 import {Link,useNavigate} from 'react-router-dom';
+import Navbar2 from '../Components/nav2';
 import './otp.css';
 const Otp = () => {
     const navigate=useNavigate();
@@ -100,6 +101,7 @@ const Otp = () => {
     
     return (  
         <div>
+          <Navbar2/>
             <div className='otp'>
                 <h1>Check Your Email</h1>
                 <p>We have sent a 4-digit OTP on your registered </p>
