@@ -36,6 +36,17 @@ export const AuthContextProvider = ({ children }) => {
 
     };
 
+    const getcoursedetails=async(payload)=>{
+        // console.log(payload);
+        return await axios.post("http://localhost:4000/user/getcoursedetail",payload,
+        {
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: 'Bearer ' + Cookies.get('ac_token')
+            }
+        })
+    }
+
     const sendcourse=async()=>{
         return axios.get("http://localhost:4000/user/sendcourse",
        {
@@ -53,7 +64,7 @@ export const AuthContextProvider = ({ children }) => {
 
   return (
     <>
-      <AuthContext.Provider value={{ user, login, signup,uploadcoursedata,sendcourse}}>
+      <AuthContext.Provider value={{ user, login, signup,uploadcoursedata,sendcourse,getcoursedetails}}>
         {children}
       </AuthContext.Provider>
       
