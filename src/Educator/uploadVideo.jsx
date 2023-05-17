@@ -52,6 +52,7 @@ const UploadVideo = (props) => {
                                 accept="video/*"
                                 required
                                 name="video"
+                                maxLength={100}
                                 onChange={handleVideo}
                                 type="file" 
                                 placeholder="Add Thumbnail">

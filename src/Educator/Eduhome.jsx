@@ -3,18 +3,16 @@ import './Eduhome.css';
 import Navbar3 from '../Components/nav3';
 import eduhomeimage from "./eduimages/sitting-8.png"
 import { useEffect,useContext,useState} from 'react';
-import Cookies from "js-cookie";
-import axios from '../Components/shared/interceptor';
 import Course from '../Components/CourseCard/CourseCard';
 import AuthContext from '../Components/shared/authContext';
 const Eduhome = () => {
 
-    let { sendcourse } = useContext(AuthContext);
+    const { sendcourse } = useContext(AuthContext);
     const [courseList,setCourseList]=useState([]);
     
     useEffect(()=>{
         sendCourse();
-    },[])
+    })
     
     function createList(course) {
         return (

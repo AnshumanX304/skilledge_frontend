@@ -7,11 +7,13 @@ import {useState} from 'react';
 import { useEffect } from 'react';
 
 const Coursedesc = () => {
-    let box3;
+    const [section,setSection]=useState('info');
+    const [box3,setBox3]=useState(0);
     useEffect(()=>{
-        box3=document.querySelector('.desccards-popularcourses');
+        setBox3(document.querySelector('.desccards-popularcourses'));
+        document.getElementById('button_info').style['text-decoration']='underline'
 
-    })
+    },[])
    
     function descpopularcoursePreviousbutton(){
         const width=box3.clientWidth;
@@ -25,20 +27,24 @@ const Coursedesc = () => {
     }
 
     function handleInfo(){
+        setSection('info');  
+        document.getElementById('button_catalog').style['text-decoration']='none'
+        document.getElementById('button_reviews').style['text-decoration']='none'
+        document.getElementById('button_info').style['text-decoration']='underline'
 
-        document.getElementsByClassName(".desccatalog").style.display = 'none';
-        document.getElementsByClassName(".descinfo").style.display = 'block';
-        document.getElementsByClassName(".descreviews").style.display = 'none';
     }
     function handleCatalog(){
-        document.getElementsByClassName('.desccatalog').style.display = 'block';
-        document.getElementsByClassName('.descinfo').style.display = 'none';
-        document.getElementsByClassName('.descreviews').style.display = 'none';
+       setSection('catalog');
+       document.getElementById('button_catalog').style['text-decoration']='underline'
+       document.getElementById('button_reviews').style['text-decoration']='none'
+       document.getElementById('button_info').style['text-decoration']='none'
+
     }
     function handleReviews(){
-        document.getElementsByClassName('.descreviews').style.display='block'
-        document.getElementsByClassName('.desccatalog').style.display = 'none';
-        document.getElementsByClassName('.descinfo').style.display = 'none';
+        setSection('reviews');
+        document.getElementById('button_catalog').style['text-decoration']='none'
+        document.getElementById('button_reviews').style['text-decoration']='underline'
+        document.getElementById('button_info').style['text-decoration']='none'
     }
     
 
@@ -67,39 +73,41 @@ const Coursedesc = () => {
             </div>
             <div className="desc-content">
                 <div className="desc_titles">
-                    <button onClick={handleInfo}>
+                    <button id="button_info" onClick={handleInfo}>
                         Info
                     </button>
-                    <button onClick={handleCatalog}>
+                    <button id="button_catalog" onClick={handleCatalog}>
                         Catalog
                     </button>
-                    <button onClick={handleReviews}>
+                    <button id="button_reviews" onClick={handleReviews}>
                         Reviews
                     </button>
                 </div>
-                <div className="descinfo">
-                    <h2 className="desc_titles_2">Description</h2>
-                    <p id="desctitles2content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mattis, 
-                    nisl a convallis tristique, nulla lectus laoreet ligula, non finibus quam magna vel risus. Morbi 
-                    pellentesque auctor orci, vel suscipit ante laoreet ac. Donec ultrices risus id est mattis laoreet. 
-                    Praesent sed elit non risus vestibulum accumsan. Nulla laoreet interdum lacus sed sagittis. Sed pretium 
-                    iaculis lacus, sagittis tincidunt leo tincidunt et. Mauris tempor velit erat. Etiam id nunc eu massa 
-                    consectetur consectetur. Nullam aliquam, diam sit amet ornare fermentum, quam arcu placerat orci, et 
-                    aliquet neque tellus sed risus. Cras dapibus elementum tortor.
-                    <br></br><br></br>
-                    Ut non dictum ipsum. Mauris urna magna, volutpat eget rutrum ac, 
-                    faucibus quis nisl. Etiam gravida, erat nec hendrerit elementum, sem mi volutpat tortor, fermentum mattis 
-                    sem justo eu nisl. Nulla a tempor libero, nec ullamcorper erat. Vivamus fermentum semper felis, eget mollis 
-                    massa scelerisque aliquet. Vestibulum mattis elementum maximus. Ut cursus, tellus vitae ullamcorper viverra, 
-                    libero nunc hendrerit velit, quis fringilla urna ex nec ex. Maecenas feugiat enim ipsum, id tristique felis 
-                    tempus et.</p>
+                <div className="infosection">
+                    {section==='info'&& <div className="descinfo">
+                        <h2 className="desc_titles_2">Description</h2>
+                        <p id="desctitles2content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mattis, 
+                        nisl a convallis tristique, nulla lectus laoreet ligula, non finibus quam magna vel risus. Morbi 
+                        pellentesque auctor orci, vel suscipit ante laoreet ac. Donec ultrices risus id est mattis laoreet. 
+                        Praesent sed elit non risus vestibulum accumsan. Nulla laoreet interdum lacus sed sagittis. Sed pretium 
+                        iaculis lacus, sagittis tincidunt leo tincidunt et. Mauris tempor velit erat. Etiam id nunc eu massa 
+                        consectetur consectetur. Nullam aliquam, diam sit amet ornare fermentum, quam arcu placerat orci, et 
+                        aliquet neque tellus sed risus. Cras dapibus elementum tortor.
+                        <br></br><br></br>
+                        Ut non dictum ipsum. Mauris urna magna, volutpat eget rutrum ac, 
+                        faucibus quis nisl. Etiam gravida, erat nec hendrerit elementum, sem mi volutpat tortor, fermentum mattis 
+                        sem justo eu nisl. Nulla a tempor libero, nec ullamcorper erat. Vivamus fermentum semper felis, eget mollis 
+                        massa scelerisque aliquet. Vestibulum mattis elementum maximus. Ut cursus, tellus vitae ullamcorper viverra, 
+                        libero nunc hendrerit velit, quis fringilla urna ex nec ex. Maecenas feugiat enim ipsum, id tristique felis 
+                        tempus et.</p>
 
-                </div>
-                <div className="desccatalog">
+                    </div>}
+                    {section==="catalog" && <div className="desccatalog">
 
-                </div>
-                <div className="descreviews">
+                    </div>}
+                    {section==='reviews' && <div className="descreviews">
 
+                    </div>}
                 </div>
 
 

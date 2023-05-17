@@ -1,6 +1,6 @@
 import './uploadCourse.css'
 import Nav3 from '../Components/nav3';
-import {Link, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import AuthContext from '../Components/shared/authContext';
 import Limage from './eduimages/limage.png'
 import {useState,useContext} from 'react';
@@ -13,6 +13,7 @@ const Uploadcourse = () => {
     const [image,setImage]=useState('');
     const [topic,setTopic]=useState('');
     const [description,setDescription]=useState('');
+    const [detailed_description,setDetailed_description]=useState('');
     const [categories,setCategories]=useState('');
     const [price,setPrice]=useState('');
     const [page,setPage]=useState(false);    //false means first page and true means second page (video upload)
@@ -33,6 +34,9 @@ const Uploadcourse = () => {
     function handleDescription(e){
         setDescription(e.target.value);
     }
+    function handleDetailed_description(e){
+        setDetailed_description(e.target.value);
+    }
     function handleCategories(e){
         setCategories(e.target.value);
     }
@@ -52,6 +56,7 @@ const Uploadcourse = () => {
         formData.append('image',image);
         formData.append('topic',topic);
         formData.append('description',description);
+        formData.append("detailed_description",detailed_description);
         formData.append('categories',categories);
         formData.append('price',price);
         formData.append('lesson',lesson);
@@ -103,7 +108,7 @@ const Uploadcourse = () => {
                                 <input className="spaceleftinput " 
                                     required
                                     value={topic}
-                        
+                                    maxLength={50}
                                     type="text"
                                     name="topic"
                                     placeholder="Create a topic for the course"
@@ -115,12 +120,25 @@ const Uploadcourse = () => {
                                     required
                                     value={description}
                                     type="text"
-
+                                    maxlength={80}
                                     name="description"
                                     placeholder="Create a description for the course"
                                     onChange={handleDescription}
         
                                 />
+                                <label for="detailed_description">Detailed Description</label><br/>
+                                <textarea className="spaceleftinput" id="uploadcourse_description" 
+                                    required
+                                    value={detailed_description}
+                                    type="text"
+                                    maxlength={1000}
+                                    name="deatiled_description"
+                                    placeholder="Create a detailed description for the course"
+                                    onChange={handleDetailed_description}
+        
+                                />
+
+
         
                                 <select name="categories" 
                                     id="upload_categories"
@@ -130,7 +148,7 @@ const Uploadcourse = () => {
                                     onChange={handleCategories}
                                 >
         
-                                    <option selected disabled>Categories</option>
+                                    <option selected hidden>Categories</option>
                                     <option value="design">Designing</option>
                                     <option value="programming">Programming</option>
                                     <option value="music">Music</option>
@@ -145,7 +163,7 @@ const Uploadcourse = () => {
                                     value={price}
                                     type="number"
                                     name="price"
-                                
+                                    maxlength={10}
                                     placeholder="Add price"
                                     onChange={handlePrice}
         

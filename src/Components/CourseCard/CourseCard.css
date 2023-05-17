@@ -1,4 +1,4 @@
-.card{
+.edu_card{
     margin-left:30px;
     font-family: 'Roboto',sans-serif;
     font-style: normal;
@@ -29,20 +29,10 @@
     margin:5px 10px;
     height:8%;
     color: #5E5F61;
-    /* white-space: nowrap; */
-    /* white-space: nowrap;
-    overflow: hidden;*/
-    /* display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis; */
     display: -webkit-box;
     max-width: 100%;
     -webkit-line-clamp: 2;
-    /* autoprefixer: off */
     -webkit-box-orient: vertical;
-    /* autoprefixer: on */
     overflow: hidden;
     text-overflow: ellipsis;
 }

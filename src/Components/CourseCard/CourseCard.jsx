@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './CourseCard.css';
 
@@ -11,7 +11,7 @@ const Cards = (props) => {
 
 
     return ( 
-            <div className="card">
+            <div className="edu_card">
                 <div><img className="card_image" height="234.37px" width="290px" src={`${cardimage}/${props.imgpath}`} alt="Hi" /></div>
                 {/* <div className="rating">
                 <FontAwesomeIcon id="home_ratingstar" icon={faStar}></FontAwesomeIcon>
@@ -20,7 +20,7 @@ const Cards = (props) => {
                 <div className="course_desc">{props.description}</div>
                 <div className="course_rate">
                     
-                    <Link to={`/eduhome/${props.id}`} >
+                    <Link to={"/eduhome/"+props.id} >
                         <button className="viewcoursesubmit">
                             View Course  
                         </button>
