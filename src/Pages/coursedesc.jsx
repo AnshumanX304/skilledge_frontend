@@ -86,7 +86,7 @@ const Coursedesc = () => {
                 <div className="infosection">
                     {section==='info'&& <div className="descinfo">
                         <h2 className="desc_titles_2">Description</h2>
-                        <p id="desctitles2content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mattis, 
+                        <p className="desctitles2content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mattis, 
                         nisl a convallis tristique, nulla lectus laoreet ligula, non finibus quam magna vel risus. Morbi 
                         pellentesque auctor orci, vel suscipit ante laoreet ac. Donec ultrices risus id est mattis laoreet. 
                         Praesent sed elit non risus vestibulum accumsan. Nulla laoreet interdum lacus sed sagittis. Sed pretium 

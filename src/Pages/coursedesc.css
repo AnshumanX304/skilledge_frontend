@@ -147,9 +147,11 @@
     font-weight: 500;
     font-size: 20px;
 }
-#desctitles2content{
+.desctitles2content{
     font-family: 'Roboto',sans-serif;
     line-height: 20px;
+
+    white-space: pre-line;
 }
 .desc_exploremore{
     margin-bottom:130px;

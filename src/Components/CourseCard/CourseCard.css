@@ -56,3 +56,12 @@
     
     font-size: 15px;
 }
+.viewcoursesubmit:hover{
+    transform:scale(1.03);
+}
+.home-explore-button{
+    width:100%;
+}
+.addlessondiv{
+    width:35%;
+}

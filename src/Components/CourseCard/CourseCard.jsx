@@ -27,8 +27,10 @@ const Cards = (props) => {
                     </Link>
              
                     
-                    <div>
-                        <button className="home-explore-button">Edit</button>
+                    <div className="addlessondiv">
+                        <Link to={"/eduhome/uploadlesson/"+props.id} >
+                            <button className="home-explore-button">Add lesson</button>
+                        </Link>
                     </div>
                 </div>
 

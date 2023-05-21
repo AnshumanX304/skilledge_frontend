@@ -11,6 +11,7 @@ import Home from './Pages/home';
 import Eduhome from './Educator/Eduhome';
 import ProductDetails from './Educator/ProductDetails.jsx';
 import WatchCourse from './Educator/watchCourse';
+import Addlesson from './Educator/addlesson';
 
 import Coursedesc from './Pages/coursedesc';
 import { AuthContextProvider } from "./Components/shared/authContext";
@@ -37,6 +38,7 @@ function App() {
                 <Route exact path="/coursedesc" element={<Coursedesc/>}/>
                 <Route exact path="/eduhome/:key" element={<ProductDetails/>}/>
                 <Route exact path="/eduhome/video/:key" element={<WatchCourse/>}/>
+                <Route exact path="/eduhome/uploadlesson/:key" element={<Addlesson/>}/>
                 {/* <Route exact path="/uploadvideo" element={<Uploadvideo/>}/> */}
                 <Route exact path="/" element={<Home/>}/> 
               </Routes>

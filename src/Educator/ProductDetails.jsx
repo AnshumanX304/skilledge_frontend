@@ -5,15 +5,19 @@ import AuthContext from '../Components/shared/authContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Vidtemplate from './vidtemplate'
+
 // import rateblockimage from '../Pages/images/rateblockimage.png';
 import {useState} from 'react';
-
+import Loader from '../loader';
 import { useContext, useEffect } from 'react';
+
+
 const ProductDetails = () => {
     const _id=useParams();
     const [section,setSection]=useState('info');
     const id=_id.key;
     const {getcoursedetails}=useContext(AuthContext);
+    const [isLoading,setIsloading]=useState(false);
 
     const [topic,setTopic]=useState('');
     const [description,setDescription]=useState('');
@@ -67,6 +71,7 @@ const ProductDetails = () => {
         let payload={
             id
         }
+        setIsloading(true);
         await getcoursedetails(payload)
         .then((res)=>{
             // console.log(res.data);
@@ -78,17 +83,19 @@ const ProductDetails = () => {
             setLessons(data.lessons);
           
             setDetailed_description(data.detailed_description);
-            console.log(detailed_description);
+            setIsloading(false);
             
         })
         .catch((err)=>{
             console.log(err);
+            setIsloading(false);
 
         })
     }
     return( 
         <>
             <Navbar3/>
+            
             <div className="desc_heading">
                 
                 <p className="desc_mainheading">{topic}</p>
@@ -125,7 +132,7 @@ const ProductDetails = () => {
                 <div className="infosection">
                     {section==='info'&& <div className="descinfo">
                         <h2 className="desc_titles_2">Description</h2>
-                        <p id="desctitles2content">{detailed_description}</p>
+                        {isLoading?<div className="productdetailsloader"><Loader/></div>:<p className="desctitles2content">{detailed_description}</p>}
 
                     </div>}
                     {section==="catalog" && <div className="desccatalog">

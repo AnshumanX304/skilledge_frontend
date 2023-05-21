@@ -55,7 +55,7 @@ const Navbar2 = () => {
                     <div className="nav_submenu_details">
                         <p >Edit Profile</p>
                     </div>
-                    <Link to='/uploadcourse'><div className="nav_submenu_details">
+                    <Link to='/eduhome'><div className="nav_submenu_details">
                         <p className="nav_submenu_details" style={{color:"#586AF5"}}>Switch to Educator</p>
 
                     </div></Link>

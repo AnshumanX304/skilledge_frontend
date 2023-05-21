@@ -5,14 +5,16 @@ import eduhomeimage from "./eduimages/sitting-8.png"
 import { useEffect,useContext,useState} from 'react';
 import Course from '../Components/CourseCard/CourseCard';
 import AuthContext from '../Components/shared/authContext';
+import Loader from '../loader';
 const Eduhome = () => {
 
     const { sendcourse } = useContext(AuthContext);
     const [courseList,setCourseList]=useState([]);
+    const [isLoading,setIsloading]=useState(false);
     
     useEffect(()=>{
         sendCourse();
-    })
+    },[])
     
     function createList(course) {
         return (
@@ -31,16 +33,22 @@ const Eduhome = () => {
       }
 
         async function sendCourse(){
-      
+            
+        setIsloading(true);
         
         await sendcourse()
         .then((res)=>{
             // console.log(res.data.myCourses);
+            setIsloading(false);
             setCourseList(res.data.myCourses);
+            
+            
+           
             
         })
         .catch((err)=>{
             console.log(err);
+            // setIsloading(false);
         })
 
         }
@@ -48,7 +56,7 @@ const Eduhome = () => {
     return ( 
         <>
             <Navbar3/>
-            <div className="eduhome">
+           {isLoading?<div className='eduhome-loader'><Loader/></div>:<div className="eduhome">
                 <div className="eduhome-left">
                     {courseList.map(createList)}
 
@@ -57,7 +65,7 @@ const Eduhome = () => {
                 <div className="eduhome-right">
                     <img src={eduhomeimage} height="350px" width="300px"></img>
                 </div>
-            </div>
+            </div>}
             
         </>
      );

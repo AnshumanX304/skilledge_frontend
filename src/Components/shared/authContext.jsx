@@ -58,13 +58,40 @@ export const AuthContextProvider = ({ children }) => {
 
     }
 
+    const getvideo=async(payload)=>{
+        const id=payload.id;
+        return axios.get('http://localhost:4000/user/getvideo/'+id,
+        {
+            headers:{
+                "Content-Type": "application/json",
+                Authorization: 'Bearer ' + Cookies.get('ac_token')
+            }
+
+        })
+    }
+
+    const addlesson=async(payload)=>{
+        const id=payload.id.key;
+        console.log(id);
+        console.log(payload.formData);
+        console.log("http://localhost:4000/user/addlesson/"+id);
+        return axios.post('http://localhost:4000/user/addlesson/'+id,payload.formData,
+       {
+            headers: {
+                "Content-Type": "multipart/form-data",
+                Authorization: 'Bearer ' + Cookies.get('ac_token')
+            }
+        })
+
+    }
+
 
 
 
 
   return (
     <>
-      <AuthContext.Provider value={{ user, login, signup,uploadcoursedata,sendcourse,getcoursedetails}}>
+      <AuthContext.Provider value={{ user, login, signup,uploadcoursedata,sendcourse,getcoursedetails,getvideo,addlesson}}>
         {children}
       </AuthContext.Provider>
       
