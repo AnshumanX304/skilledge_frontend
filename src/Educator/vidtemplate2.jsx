@@ -1,11 +1,11 @@
-import './vidtemplate.css';
+import './vidtemplate2.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay} from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 import { useEffect,useState,useContext } from 'react';
 import AuthContext from '../Components/shared/authContext';
 
-const Vidtemplate = (props) => {
+const Vidtemplate2 = (props) => {
 
     const[lesson,setLesson]=useState('');
 
@@ -16,15 +16,15 @@ const Vidtemplate = (props) => {
     },[])
 
     async function getVideo(){
-        console.log(props);
+        // console.log(props);
         const id=props.id;
-        console.log(id);
+        // console.log(id);
         let payload={
             id
         }
         await getvideo(payload)
         .then((res)=>{
-            console.log(res.data.videoDetails.lesson);
+            // console.log(res.data.videoDetails.lesson);
             setLesson(res.data.videoDetails.lesson);
 
         })
@@ -38,7 +38,7 @@ const Vidtemplate = (props) => {
 
     return (
         <>
-            <Link to={'/eduhome/video/'+props.id} style={{ textDecoration: 'none' }}><div id='courseoverview_section'>
+            <Link to={'/eduhome/video/'+props.id} style={{ textDecoration: 'none' }}><div id='courseoverview_section_vidtemplate2'>
                 <div>
                 {lesson}
                 </div>
@@ -50,4 +50,4 @@ const Vidtemplate = (props) => {
       );
 }
  
-export default Vidtemplate;
+export default Vidtemplate2;
