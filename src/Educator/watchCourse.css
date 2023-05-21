@@ -1,0 +1,40 @@
+.videoplayer video{
+    width:100vw;
+    height:50vh;
+}
+.watchcourse_content1{
+    
+    width:50vw;
+    padding:2% 5%;
+}
+.watchcourse_description p:first-of-type{
+    color:#293593;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+.watchcourse_description p{
+    letter-spacing: 0.3px;
+}
+.watchcourse_description h3{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+}
+.watchcourse_content2 p{
+    color:#293593;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
+}
+.watchcourse_content2{
+    width:50vw;
+    padding:2% 5%;
+}
