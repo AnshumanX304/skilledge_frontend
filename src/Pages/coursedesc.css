@@ -16,6 +16,12 @@
     margin:3px;
 
 }
+.desc_infocatalog_btn{
+    width:50%;
+}
+.desc_reviews_btn{
+    width:50%;
+}
 .desc_rateinforate{
     font-family: 'Roboto',sans-serif;
     font-style: normal;
@@ -34,7 +40,14 @@
 .desccards-popularcourses{
     height:450px;
     display:flex;
-    margin-left:40px;
+    margin-left:70px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.desccards-popularcourses2{
+    height:450px;
+    display:flex;
+    margin-left:70px;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -80,6 +93,13 @@
     margin-right:8px;
    
 }
+#desc_ratingstar_2{
+    font-size: 15px;
+    color:#F48C06;
+    margin-right:8px;
+   
+}
+
 .desc_rateinfo{
     width:290px;
 }
@@ -89,10 +109,95 @@
     margin-right:30px;
    
 }
+.review-section-child{
+    width:80%;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+}
+.desc-review-profilesection{
+    display:flex;
+    justify-content: space-between;
+  
+}
+.desc-review-profilesection p{
+   margin-top:4%;
+}
+.profileimage-name-section{
+    display:flex;
+    width:40%;
+}
+.review-section-child2{
+    background-color: #EEF0FD;
+    padding:17px;
+    border-radius: 8px;
+    /* margin-right:10%; */
+}
+.profileimage-name-section img{
+    margin-right:10%;
+}
+.review-comments{
+    border:1px solid #586AF5;
+    padding:10px 12px;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    font-size:13px;
+    color:#1D1E21;
+    min-height: 100px;
+}
+.comments-heading{
+    margin:4px;
+}
+.heading-username{
+    color:#575858;
+}
+.rating-heading{
+    color:#293593;
+}
+.profileimage-name-section img{
+    height:30px;
+    width:30px;
+}
+.rated-content{
+    display:block;
+}
+.heading-editreview{
+    font-size:13px;
+    padding:4px;
+    background-color: #EEF0FD;
+    border-radius: 4px;
+    border-width: 1.5px;
+    border-color: #586AF5;
+}
+.info-catalog-btn{
+    display:flex;
+    justify-content: space-around;
+    padding-right:30%;
+   
+}
+.parent-container{
+    display:flex;
+    width:100%;
+    min-height:500px;
+
+}
+.desc-child1{
+    width:60%;
+    margin:5%;
+
+}
+.desc-child2{
+    width:40%;
+    margin:5%;
+    
+
+}
+.descinfo-purchased{
+    padding:0% 5%;
+}
 .desc_titles{
     display:flex;
     justify-content: space-around;
-    padding-right:50vw;
+    padding-right:30vw;
     padding-top:8vh;
     color:#293593;
     font-family: 'Roboto',sans-serif;
@@ -106,6 +211,21 @@
     margin-left:5vw;
     margin-top:40px;
 }
+#button_info_purchased{
+    background-color: white;
+    border:0px;
+    font-size:22px;
+    color:#293593;
+    margin-bottom:10px;
+}
+#button_catalog_purchased{
+    background-color: white;
+    border:0px;
+    font-size:22px;
+    color:#293593;
+}
+
+
 .desc_buynow{
     background-color: #293593;
     color:white;
@@ -139,6 +259,11 @@
     font-size: 18px;
 
 }
+.template-width{
+   
+    width:40%;
+    padding-left:5%;
+}
 .desc_titles_2{
     
     color:black;
@@ -152,6 +277,7 @@
     line-height: 20px;
 
     white-space: pre-line;
+    margin-bottom: 4%;
 }
 .desc_exploremore{
     margin-bottom:130px;
@@ -166,6 +292,10 @@
 #nav_shop{
     margin-top:8px;
 }
-
+.infosection{
+    height:100%;
+    min-height: 350px;
+    box-sizing:border-box;
+}
 
 

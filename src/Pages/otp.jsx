@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react";
 import axios from 'axios';
-import {Link,useNavigate} from 'react-router-dom';
-import Navbar2 from '../Components/nav2';
+import {useNavigate} from 'react-router-dom';
+import Navbar1 from '../Components/nav1';
 import './otp.css';
 const Otp = () => {
     const navigate=useNavigate();
@@ -101,36 +101,11 @@ const Otp = () => {
     
     return (  
         <div>
-          <Navbar2/>
+          <Navbar1/>
             <div className='otp'>
                 <h1>Check Your Email</h1>
                 <p>We have sent a 4-digit OTP on your registered </p>
                 <p>email to reset the password.</p>
-                
-        
-                {/* {
-                    otp.map((data,index)=>{
-                        return(
-                            <input className="otp-inputField"
-                                type="text"               //use this link while integrating with backend
-                                name="otp"
-                                maxLength="1"
-                                key={index}
-                                value={data}
-                                onChange={e=>handleChange(e.target,index)}
-                                onFocus={e=>e.target.select()}
-                            />
-                        );
-                })} */}
-            
-                {/* <form class="otp-form"> 
-                    <input
-                                                   //https://www.youtube.com/watch?v=qf56frPk5lA 
-                        type="text"               //use this link while integrating with backend
-                        name="otp"
-                        maxLength="4"
-                    />
-                </form>   */}
                 <form id="otp-inputField" onSubmit={handleSubmit}>
                     <input 
                         type="text"

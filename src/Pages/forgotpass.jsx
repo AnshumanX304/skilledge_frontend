@@ -24,9 +24,10 @@ const Forgotpass = () => {
         .then((res) => {
             // setMssg(res.data.msg);
             console.log(res.data);   
+            navigate("/otp");
             // alert(res.data.msg); 
             // setLoading(false);
-            navigate("/otp");
+            // navigate("/otp");
             // setStatus(res.data.success);
             // setLoading(false);
             // navigate("/otp2");

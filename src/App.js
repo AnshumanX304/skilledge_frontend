@@ -12,8 +12,10 @@ import Eduhome from './Educator/Eduhome';
 import ProductDetails from './Educator/ProductDetails.jsx';
 import WatchCourse from './Educator/watchCourse';
 import Addlesson from './Educator/addlesson';
-
 import Coursedesc from './Pages/coursedesc';
+import Popup from './Pages/Popup/Popup'
+import Cart from './Pages/cart/cart';
+import Pur_courses from './Pages/Purchased Courses/Pur_Courses'
 import { AuthContextProvider } from "./Components/shared/authContext";
 
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
@@ -35,10 +37,15 @@ function App() {
                 <Route exact path="/otp" element={<Otp/>}/>
                 <Route exact path="/forgotpassword" element={<Forgotpass/>}/>
                 <Route exact path="/resetpassword" element={<Resetpass/>}/>
-                <Route exact path="/coursedesc" element={<Coursedesc/>}/>
+                <Route exact path="/coursedesc/:key" element={<Coursedesc/>}/>
                 <Route exact path="/eduhome/:key" element={<ProductDetails/>}/>
                 <Route exact path="/eduhome/video/:key" element={<WatchCourse/>}/>
+                <Route exact path="/eduhome/mycart" element={<Cart/>}/>
                 <Route exact path="/eduhome/uploadlesson/:key" element={<Addlesson/>}/>
+                <Route exact path="/purchased-courses" element={<Pur_courses/>}/>
+                <Route exact path="/popup" element={<Popup/>}/>
+                
+                
                 {/* <Route exact path="/uploadvideo" element={<Uploadvideo/>}/> */}
                 <Route exact path="/" element={<Home/>}/> 
               </Routes>

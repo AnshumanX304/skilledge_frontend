@@ -41,6 +41,7 @@ const UploadVideo = (props) => {
                         <form >
                             <input className="uploadvideo_right_form_input1" type="text" placeholder='Name of Lesson'
                                 name="lesson"
+                                required
                                 onChange={handleLesson}
                                 value={lesson}
                             />

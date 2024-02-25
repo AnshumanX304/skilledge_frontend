@@ -38,7 +38,7 @@
     border-radius: 5px;
 
 }
-textarea { 
+.uploadcourseform textarea { 
     resize: vertical; 
     border-width: 2px;
     width:400px;
@@ -86,7 +86,7 @@ select{
     background-color: #EEF0FD;
     color:grey;
     font-size: 15px;
-    width:425px;
+    width:402px;
 }
 .spaceleftinput{
     padding-left:15px;

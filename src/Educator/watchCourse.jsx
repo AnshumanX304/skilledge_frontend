@@ -45,8 +45,9 @@ const WatchCourse = () => {
         await getvideo(payload)
         .then((res)=>{
             const data=res.data;
+            console.log(res.data);
             const courseid=data.videoDetails.courseid;
-            // console.log(courseid);
+            console.log(courseid);
             getcourseDetails(courseid);
             
 
@@ -58,6 +59,7 @@ const WatchCourse = () => {
     }
 
     async function getcourseDetails(id){
+        console.log(id);
         let payload={
             id
         }

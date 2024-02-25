@@ -1,0 +1,20 @@
+#courseoverview_section3{
+    font-family: 'Roboto',sans-serif;
+    font-style:normal;
+    font-weight: 500;
+    width:70%;
+    font-size: 15px;
+    margin-left:5%;
+    margin-bottom:15px;
+    padding:2%;
+    border: 1.5px solid black;
+    display:flex;
+    justify-content: space-between;
+    border-radius:4px;
+    color:black;
+}
+
+#courseoverview_section:hover{
+    transform:scale(1.01);
+    border: 1.5px solid rgb(86, 1, 1);
+}

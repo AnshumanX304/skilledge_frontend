@@ -7,8 +7,12 @@ import {useNavigate} from "react-router-dom";
 import Ellipse36 from './logo/Ellipse36.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faToggleOff } from '@fortawesome/free-solid-svg-icons';
+import { useEffect,useState,useContext } from "react";
+import AuthContext from "./shared/authContext";
 const Navbar2 = () => {
     const navigate=useNavigate();
+
+    const {cartcount} = useContext(AuthContext);
 
     function logout(){
         localStorage.setItem("isloggedin" ,'false');
@@ -23,6 +27,41 @@ const Navbar2 = () => {
         navigate("/login");
 
     }
+    const [count,setCount]=useState();
+    useEffect(()=>{
+        
+        sendcartcount();
+
+
+    },[count])
+
+    
+    // function displaycart(){
+    //     if(count===0){
+    //         document.querySelector('bracketposition').style.display="none";
+    //     }
+    //     else{
+    //         document.querySelector('bracketposition').style.display="block";
+    //     }
+    // }
+    
+    async function sendcartcount(){
+        await cartcount()
+        .then((res)=>{
+            if(res.data.count!=0){
+
+                setCount(res.data.count);
+            }
+            else{
+                document.getElementsByClassName("countdiv")[0].style.display="none";
+            }
+            
+            // displaycart();
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    }
     function toggleMenu(){
         let submenu=document.getElementById('subMenu');
         submenu.classList.toggle("open-menu");
@@ -33,7 +72,7 @@ const Navbar2 = () => {
         <div className="nav1">
             <div id="logo">
                 <img height="40px" width="40px" src={logo} alt="Hi" />
-                <span id="skilledge">Skill Edge</span>
+                <Link className="skilledge" style={{textDecoration:"none",color:"inherit"}} to="/"><span className="skilledge">Skill Edge</span></Link>
                             
             </div>
 
@@ -43,9 +82,9 @@ const Navbar2 = () => {
             </div>
              
             <div id="auth">
-                <img id='nav_shop' height="20px" width="20px" src={shop} alt="shop"></img>
-                <Link to='/login'><button id="nav_button">     Home</button></Link>
-                <Link to='/signup'><button id="nav_button">My Courses</button></Link>
+                <div className="cart"><Link to="/eduhome/mycart"><img id='nav_shop' height="20px" width="20px" src={shop} alt="shop"></img></Link><div className="countdiv" style={{display: "block"}}><button className="countbutton">{count}</button></div></div>
+                <Link to='/'><button id="nav_button">     Home</button></Link>
+                <Link to='/purchased-courses'><button id="nav_button">My Courses</button></Link>
                 <img className="nav_imagelogo" height="30px" width="30px" src={Ellipse36} alt="Hi" onClick={toggleMenu}/>
                 
                 <div className="submenu" id="subMenu">

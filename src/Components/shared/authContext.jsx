@@ -87,11 +87,111 @@ export const AuthContextProvider = ({ children }) => {
 
 
 
+    const gethomecourses=async()=>{
+      
+      return axios.get("http://localhost:4000/user/gethomecourses",
+      {
+        headers:{
+            "Content-Type": "application/json",
+            Authorization: 'Bearer ' + Cookies.get('ac_token')
+        }
 
+    }
+      );
+    }
+
+
+
+  const addtocart=async(payload)=>{
+    const id=payload.id;
+    
+    return await axios.get("http://localhost:4000/user/addtocart/"+id,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: 'Bearer ' + Cookies.get('ac_token')
+    }
+  })
+
+
+  }
+
+
+  const cartcount=async()=>{
+    return await axios.get("http://localhost:4000/user/cartcount",
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: 'Bearer ' + Cookies.get('ac_token')
+    }
+  })
+  }
+
+
+  const cartitems=async()=>{
+    return await axios.get("http://localhost:4000/user/cartitems",
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: 'Bearer ' + Cookies.get('ac_token')
+      }
+    })
+  }
+
+
+  const deletecart=async(payload)=>{
+    const id=payload.id;
+    return await axios.get("http://localhost:4000/user/deletecart/"+id,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: 'Bearer ' + Cookies.get('ac_token')
+      }
+
+    })
+  }
+
+  const checkout=async()=>{
+    return await axios.get("http://localhost:4000/user/checkout",
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: 'Bearer ' + Cookies.get('ac_token')
+      }
+
+    })
+  }
+
+  const purchasedcourses=async()=>{
+    return await axios.get("http://localhost:4000/user/purchasedcourses",
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: 'Bearer ' + Cookies.get('ac_token')
+      }
+
+    })
+  }
+
+  const addreview=async(payload)=>{
+    const data={
+      rating:payload.rating,
+      review:payload.review,
+    }
+    const id=payload.id
+   console.log(data,id);
+    return await axios.post("http://localhost:4000/user/addreview/"+id,data,
+    {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: 'Bearer ' + Cookies.get('ac_token')
+      }
+    })
+  }
 
   return (
     <>
-      <AuthContext.Provider value={{ user, login, signup,uploadcoursedata,sendcourse,getcoursedetails,getvideo,addlesson}}>
+      <AuthContext.Provider value={{ user, login, signup,uploadcoursedata,sendcourse,getcoursedetails,getvideo,addlesson,gethomecourses,addtocart,cartcount,cartitems,deletecart,checkout,purchasedcourses,addreview}}>
         {children}
       </AuthContext.Provider>
       

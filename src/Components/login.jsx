@@ -98,7 +98,7 @@ const Login = () => {
                     {/* <ToastContainer/> */}
                 </div>
                 <br></br>
-                <span class="forgotit">Forgot  password ? <Link to='/forgotpassword'><span id="click">Click here</span></Link></span>
+                <span className="forgotit">Forgot  password ? <Link to='/forgotpassword'><span id="click">Click here</span></Link></span>
 
             </div>
 

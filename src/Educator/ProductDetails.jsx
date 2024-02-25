@@ -132,7 +132,7 @@ const ProductDetails = () => {
                 <div className="infosection">
                     {section==='info'&& <div className="descinfo">
                         <h2 className="desc_titles_2">Description</h2>
-                        {isLoading?<div className="productdetailsloader"><Loader/></div>:<p className="desctitles2content">{detailed_description}</p>}
+                        {isLoading?<div className="productdetailsloader"><Loader/></div>:<div><p className="desctitles2content">{detailed_description}</p></div>}
 
                     </div>}
                     {section==="catalog" && <div className="desccatalog">
